@@ -21,7 +21,7 @@ export default function Signup(){
 
     const sendMail = async(e) =>{
         e.preventDefault()
-        // console.log('otp send')
+        console.log('otp send')
         const emailId = {
             email: "kartheek6092@gmail.com",
         }
@@ -53,7 +53,7 @@ export default function Signup(){
                     </InputField>
                     
                     <Link to='/verify' style={{width: '85%', alignSelf: 'center', textDecoration: 'none'}}> 
-                        <ContinueBtn type='submit' >Continue <FaArrowRightLong size={15} /> </ContinueBtn>
+                        <ContinueBtn type='submit' onClick={sendMail} >Continue <FaArrowRightLong size={15} /> </ContinueBtn>
                     </Link>
                 </LoginForm>
             </BodyContainer>
